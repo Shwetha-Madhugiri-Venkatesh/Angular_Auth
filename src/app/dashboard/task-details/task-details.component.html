@@ -1,0 +1,36 @@
+<div class="overlay">
+	<div class="popup">
+        <h2>{{selected_task.title}}</h2>
+        <hr>
+		<a class="close" href="#" (click)="close_Comp()">&times;</a>
+		<div class="content">
+			<section class="container">
+                
+                <h3>{{selected_task.title}}</h3>
+                <p>
+                    {{selected_task.description}}
+                </p>
+                <div style="display: flex; margin-top: 20px;">
+                    <div style="width: 50%;">
+                        <strong>Assigned To: </strong>
+                        {{selected_task.assigned_to}}
+                    </div>
+                    <div style="width: 50%;">
+                        <strong>Created At: </strong>
+                       {{selected_task.created_at}}
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 20px;">
+                    <div style="width: 50%;">
+                        <strong>Priority: </strong>
+                       {{selected_task.priority}}
+                    </div>
+                    <div style="width: 50%;">
+                        <strong>Current Status: </strong>
+                       {{selected_task.status}}
+                    </div>
+                </div>
+            </section>
+		</div>
+	</div>
+</div>
