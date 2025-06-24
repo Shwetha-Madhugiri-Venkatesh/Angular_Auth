@@ -1,8 +1,10 @@
 import { inject } from "@angular/core"
 import { AuthorizeUser } from "./Sevices/authorize"
 import { User } from "./Models/user";
+import { CanActivateFn } from "@angular/router";
 
-export const Authorize_Guards=(login_details:User)=>{
+
+export const Authorize_Guards = (login_details:User)=>{
         let users = inject(AuthorizeUser);
         let previousUsers:User[];
         users.fetchUser().subscribe((res:User[])=>{
